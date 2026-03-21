@@ -339,3 +339,23 @@ void Hotel::findCheapestRoom() const {
     std::cout << "\n  Cea mai ieftina camera disponibila:\n";
     std::cout << rooms[cheapestIdx];
 }
+
+void Hotel::printGuests() const {
+    if (noGuests == 0) {
+        std::cout << " Nu exista oaspeti inregistrati.\n";
+        return;
+    }
+    std::cout << "\n  Oaspeti inregistrati:\n";
+    for (int i = 0; i < noGuests; i++)
+      std::cout << guests[i];
+}
+
+void Hotel::printReservations() const {
+    if (noReservations == 0) {
+        std::cout << " Nu exista rezervari.\n";
+        return;
+    }
+    std::cout << "\n  Rezervari:\n";
+    for (int i = 0; i < noReservations; i++)
+        std::cout << reservations[i];
+}

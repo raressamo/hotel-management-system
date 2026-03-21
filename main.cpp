@@ -68,7 +68,7 @@ void guestMenu(Hotel& hotel) {
                 break;
             }
             case 2: {
-                std::cout << hotel;
+                hotel.printGuests();
                 break;
             }
             case 0:
@@ -87,6 +87,7 @@ void reservationMenu(Hotel& hotel) {
         std::cout << "2. Check-out\n";
         std::cout << "3. Adauga serviciu extra la rezervare\n";
         std::cout << "4. Venit total hotel\n";
+        std::cout << "5. Afiseaza toate rezervarile\n";
         std::cout << "0. Inapoi\n";
         std::cout << "Optiune: ";
         std::cin >> option;
@@ -124,6 +125,10 @@ void reservationMenu(Hotel& hotel) {
             case 4: {
                 // apelam functia care calculeaza venitul total
                 std::cout << "Venit total: " << hotel.getTotalRevenue() << " RON\n";
+                break;
+            }
+            case 5: {
+                hotel.printReservations();
                 break;
             }
             case 0:

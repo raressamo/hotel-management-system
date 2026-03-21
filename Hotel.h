@@ -61,6 +61,8 @@ public:
     void getAvailableRooms() const; // afisare camere disponibile
     double getTotalRevenue() const; // calcul venit total al hotelului
     void findCheapestRoom() const; // cea mai ieftina camera disponibila
+    void printGuests() const;
+    void printReservations() const;
 };
 
 #endif
