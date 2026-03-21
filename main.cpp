@@ -1,8 +1,13 @@
 #include <iostream>
+#include <cstdlib>
 #include "Hotel.h"
 #include "Room.h"
 #include "Guest.h"
 #include "Reservation.h"
+
+void clearScreen() {
+    system("cls");
+}
 
 void roomMenu(Hotel& hotel) {
     int option;
@@ -15,6 +20,7 @@ void roomMenu(Hotel& hotel) {
         std::cout << "0. Inapoi\n";
         std::cout << "Optiune: ";
         std::cin >> option;
+        clearScreen();
 
         switch (option) {
             case 1: {
@@ -57,6 +63,7 @@ void guestMenu(Hotel& hotel) {
         std::cout << "0. Inapoi\n";
         std::cout << "Optiune: ";
         std::cin >> option;
+        clearScreen();
 
         switch (option) {
             case 1: {
@@ -91,6 +98,7 @@ void reservationMenu(Hotel& hotel) {
         std::cout << "0. Inapoi\n";
         std::cout << "Optiune: ";
         std::cin >> option;
+        clearScreen();
 
         switch (option) {
             case 1: {
@@ -153,6 +161,7 @@ int main() {
         std::cout << "0. Exit\n";
         std::cout << "Optiune: ";
         std::cin >> option;
+        clearScreen();
 
         switch (option) {
             case 1:
