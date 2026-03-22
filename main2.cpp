@@ -706,6 +706,7 @@ public:
     void findCheapestRoom() const; // cea mai ieftina camera disponibila
     void printGuests() const;
     void printReservations() const;
+    void addExtraCharge(int reservationId, float amount);
 };
 
 int Hotel::totalHotels = 0;
@@ -1067,6 +1068,15 @@ void Hotel::printReservations() const {
         std::cout << reservations[i];
 }
 
+void Hotel::addExtraCharge(int reservationId, float amount) {
+    int idx = findReservationIndex(reservationId);
+    if (idx == -1) {
+        std::cout << "Rezervarea cu ID " << reservationId << " nu exista!\n";
+        return;
+    }
+    reservations[idx].addExtraCharge(amount);
+}
+
 void clearScreen() {
     system("cls");
 }
@@ -1189,7 +1199,7 @@ void reservationMenu(Hotel& hotel) {
                 std::cin >> reservationId;
                 std::cout << "Suma serviciu extra (RON): ";
                 std::cin >> amount;
-                std::cout << "Serviciu extra adaugat!\n";
+                hotel.addExtraCharge(reservationId, amount);
                 break;
             }
             case 4: {
