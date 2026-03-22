@@ -19,6 +19,10 @@ Aplicație de gestiune a unui hotel implementată în C++, care demonstrează pr
 Aplicația permite gestionarea camerelor, oaspeților și rezervărilor unui hotel printr-un meniu interactiv în linia de comandă.
 
 ---
+## Demo
+https://github.com/user-attachments/assets/22632aa9-9b50-4b8e-a3ef-785753d0b6b6
+
+---
 
 ## Clase implementate
 
